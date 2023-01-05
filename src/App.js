@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Canvas from "./components/Canvas";
+import './App.css'
+import {useRef} from "react";
+import {Button} from "@mui/material";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+
+    const canvasContainer = useRef(null)
+
+    return(
+        <div style={{display: "flex", height: "100%", margin: "10px"}}>
+            <div className="item" style={{flexBasis: "75%"}} ref={canvasContainer}>
+                <Canvas canvasContainer={canvasContainer}/>
+            </div>
+            <div className="item" style={{flexBasis: "25%"}}>
+            </div>
+        </div>
+    )
 }
 
 export default App;

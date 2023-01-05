@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html, body, #root, #root>div {
+  height: 99%;
+  background-color: #353636;
+  background-image:
+          radial-gradient(at 47% 33%, hsl(160.00, 0%, 63%) 0, transparent 59%),
+          radial-gradient(at 82% 65%, hsl(180.00, 2%, 86%) 0, transparent 55%);
+}
